@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suraj Thakur | Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ========== RESET ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0b0b0b;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ========== NAVBAR ========== */
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 80px;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav h1 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00c6ff;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle at center, #111 0%, #000 100%);
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero h2 {
+      font-weight: 400;
+      color: #ccc;
+      margin-top: 10px;
+      height: 25px;
+    }
+
+    .hero button {
+      margin-top: 25px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .hero button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px #0072ff;
+    }
+
+    /* ========== ABOUT ========== */
+    section {
+      padding: 100px 10%;
+    }
+
+    .about {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+
+    .about img {
+      width: 300px;
+      border-radius: 50%;
+      border: 3px solid #00c6ff;
+      box-shadow: 0 0 20px rgba(0, 198, 255, 0.4);
+    }
+
+    .about-text {
+      max-width: 500px;
+    }
+
+    .about-text h2 {
+      color: #00c6ff;
+      margin-bottom: 10px;
+    }
+
+    .about-text p {
+      line-height: 1.8;
+      color: #aaa;
+    }
+
+    /* ========== PROJECTS ========== */
+    .projects {
+      text-align: center;
+    }
+
+    .projects h2 {
+      color: #00c6ff;
+      margin-bottom: 50px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #111;
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(0, 198, 255, 0.3);
+    }
+
+    .project-card h3 {
+      color: #00c6ff;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    /* ========== CONTACT ========== */
+    .contact {
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #00c6ff;
+      margin-bottom: 15px;
+    }
+
+    .contact p a {
+      color: #00c6ff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .contact p a:hover {
+      text-shadow: 0 0 10px #00c6ff;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #777;
+      background: #080808;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      nav { padding: 20px 30px; }
+      .about { flex-direction: column; text-align: center; }
+      .about img { width: 220px; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav>
+    <h1>Suraj Thakur</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="home" class="hero">
+    <h1>Hi, I'm Suraj Thakur 👋</h1>
+    <h2 id="typewriter"></h2>
+    <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">Explore Projects</button>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about">
+    <div class="about">
+      <img src="https://i.ibb.co/6N9vnhK/profile-pic.png" alt="Profile Picture">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I'm a creative web developer who loves to build beautiful and functional digital experiences.  
+          I specialize in front-end development, crafting responsive, interactive, and user-friendly websites.  
+          I enjoy turning ideas into code that looks amazing and performs even better.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section id="projects" class="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A sleek and minimal personal portfolio showcasing my work and skills.</p>
+      </div>
+      <div class="project-card">
+        <h3>Weather Dashboard</h3>
+        <p>A live weather app using OpenWeather API with animated icons.</p>
+      </div>
+      <div class="project-card">
+        <h3>Interactive College Site</h3>
+        <p>Built a responsive college homepage with dark theme and JS features.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <p>📧 <a href="mailto:surajthakur@example.com">surajthakur@example.com</a></p>
+    <p>🌐 <a href="https://github.com/">github.com/SurajThakur</a></p>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <p>© 2025 Suraj Thakur | Crafted with 💙 and 100+ years of web dev mastery</p>
+  </footer>
+
+  <!-- ========== TYPEWRITER JS ========== -->
+  <script>
+    const textArray = ["A Web Developer", "A Designer", "A Dream Builder"];
+    let index = 0;
+    let charIndex = 0;
+    const typeElement = document.getElementById("typewriter");
+
+    function typeEffect() {
+      if (charIndex < textArray[index].length) {
+        typeElement.textContent += textArray[index].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, 100);
+      } else {
+        setTimeout(eraseEffect, 1500);
+      }
+    }
+
+    function eraseEffect() {
+      if (charIndex > 0) {
+        typeElement.textContent = textArray[index].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(eraseEffect, 50);
+      } else {
+        index = (index + 1) % textArray.length;
+        setTimeout(typeEffect, 500);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", typeEffect);
+  </script>
+</body>
+</html>
